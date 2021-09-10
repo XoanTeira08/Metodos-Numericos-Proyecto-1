@@ -42,7 +42,7 @@ function xr=reglaFalsa(fun,a,b,tol)
       i = i + 1;
       fprintf('%2i \t %f \t %f\n', i, xr, error);
     endwhile
-    fprintf('\n La mejor aproximacion a la raiz tomando una tolerancia de %f es x = %f \n y se realizaron %i iteraciones\n', tol, xr, i);
+    fprintf('\n La mejor aproximacion a la raiz tomandoun error de %f es x = %f \n y se realizaron %i iteraciones\n', tol, xr, i);
   else
     disp("La solucion no esta en el intervalo");
   endif
