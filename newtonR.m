@@ -4,7 +4,7 @@ function xs=newtonR(f,fdev,x,total)
   fprintf('|Metodo de Newton-Raphson|\n\n');
   i=1;
   error=2;
-  %PRIMERA INTERACCION
+  %PRIMERA ITERACION
   fvalor=feval(f,x);
   fdevvalor=feval(fdev,x);
   xs=x-(fvalor/fdevvalor);
@@ -14,8 +14,8 @@ function xs=newtonR(f,fdev,x,total)
   fvalor=feval(f,x);
   fdevvalor=feval(fdev,x);
   %PRIMERA IMPRESION
-  fprintf('Iter. \t xr \t\t ea \n');
-  fprintf('%2i \t %f \t %f\n', i, xs, error);
+  fprintf('|Iter. \t xr \t\t ea |\n');
+  fprintf('|%2i \t %f \t %f|\n', i, xs, error);
   %CICLO DE REPETICION
   while error>total
     xs=x-(fvalor/fdevvalor);
@@ -24,8 +24,8 @@ function xs=newtonR(f,fdev,x,total)
     fvalor=feval(f,x);
     fdevvalor=feval(fdev,x);
     i = i + 1;
-    fprintf('%2i \t %f \t %f\n', i, xs, error);
+    fprintf('|%2i \t %f \t %f|\n', i, xs, error);
   end %while
   %IMPRESION DE RESULTADOS 
-   fprintf('\n La mejor aproximacion a la raiz tomando una tolerancia de %f es x = %f \n y se realizaron %i iteraciones\n', total, xs, i);
+   fprintf('\n| La mejor aproximacion a la raiz tomando una tolerancia de %f es x = %f \n y se realizaron %i iteraciones|\n', total, xs, i);
 
